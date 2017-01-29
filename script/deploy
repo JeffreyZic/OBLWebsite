@@ -3,6 +3,7 @@
 ssh app@104.236.77.102 <<EOF
     cd ~/OBLWebsite
     git pull # a small change
+    git checkout master
     npm install --production
     forever restartall
     exit
