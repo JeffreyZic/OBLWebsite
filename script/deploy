@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ssh app@104.236.77.102 <<EOF
-    cd ~/hello-jenkins
+    cd ~/OBLWebsite
     git pull # a small change
     npm install --production
     forever restartall
