@@ -10,4 +10,17 @@ describe('homepage', function() {
             expect(response.statusCode).to.equal(200);
         });
     });
+
+    describe('news section', function() {
+
+        it('is labeled with League News', function() {
+            // We want the news section to be properly labelled
+
+            var news = document.getElementsByClassName('news');
+
+            request(url, function(error, response, body) {
+                expect($('.news').html()).to.equal('League News');
+            });
+        });
+    });
 });
