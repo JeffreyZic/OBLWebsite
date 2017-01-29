@@ -1,5 +1,6 @@
 var expect = require("chai").expect;
 var request = require("request-mocha");
+var jsdom = require('mocha-jsdom');
 
 describe('homepage', function() {
 
@@ -12,6 +13,8 @@ describe('homepage', function() {
     });
 
     describe('news section', function() {
+
+        jsdom()
 
         it('is labeled with League News', function() {
             // We want the news section to be properly labelled
