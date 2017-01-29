@@ -2,7 +2,7 @@
 
 ssh app@104.236.77.102 <<EOF
     cd ~/hello-jenkins
-    git pull
+    git pull # a small change
     npm install --production
     forever restartall
     exit
