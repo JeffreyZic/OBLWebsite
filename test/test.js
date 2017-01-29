@@ -1,8 +1,13 @@
-var request = require('supertest');
-var app = require('../app.js');
+var expect = require("chai").expect;
+var request = require("request-mocha");
 
-describe('GET /', function() {
-    it('responds with welcome message', function(done) {
-        request(app).get('/').expect('Welcome to the OBL! This is a test change!', done);
+describe('homepage', function() {
+
+    var url = "http://localhost:5000";
+
+    it('returns status 200', function() {
+        request(url, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+        });
     });
 });
